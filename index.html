@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>JS-Photo-filter</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <label class="switcher__label" for="switcher-theme">
+                <input type="checkbox" id="switcher-theme" class="switcher__checkbox" />
+                <span class="switcher__btn"></span>
+            </label>
+            <h1 class="header__title">Photo - Filter</h1>
+            <button class="fullscreen openfullscreen"></button>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="buttons">
+               <button class="btn btn--reset">Reset Filters</button>
+               <button class="btn btn--next btn--active">Next Picture</button> 
+                <button class="btn btn--save">Save Picture</button>
+                <label class="btn btn--load" for="btnInput">
+                    Load Picture
+                    <input class="btn--load--input" id="btnInput" name="upload" type="file" placeholder="Load picture" />
+                </label>
+            </section>
+            <section class="filters">
+                <div class="filters__result loaded">
+            
+                    <img class="filters__img" alt="Image">
+                    <canvas></canvas>
+                     <section class="code">
+                        <h3 class="code__title">Code: </h3>
+                        <div class="code__container">
+                            <div>
+                                <span>CSS3: </span>
+                                <input type="text" class="code__input" value="blur(0px) invert(0%) sepia(0%) saturate(100%) hue-rotate(0deg)">
+                            </div>
+                            <button class="btn code__btn copy-css">Copy</button>
+                        </div>
+                    </section> 
+                </div>
+                <div class="filters__form">
+                    <h2 class="filters__form-title">Filters:</h2>
+                    <label>
+                        Blur: <span>0</span>px
+                        <input name="blur" data-sizing="px" type="range" min="0" max="10" value="0" />
+                        <input name="blur" type="number" class="output" value="0" min="0" max="10">
+                      </label>
+                      <label>
+                        Invert: <span>0</span>%
+                        <input name="invert" data-sizing="%" type="range" min="0" max="100" value="0" />
+                        <input name="invert" type="number" class="output" value="0" min="0" max="100">
+                      </label>
+                      <label>
+                       Sepia: <span>0</span>%
+                        <input name="sepia" data-sizing="%" type="range" min="0" max="100" value="0" />
+                        <input name="sepia" type="number" class="output" value="0" min="0" max="100">
+                      </label>
+                      <label>
+                        Hue rotate: <span>0</span>deg
+                        <input name="hue" data-sizing="deg" type="range" min="0" max="360" value="0" />
+                        <input name="hue" type="number" class="output" value="0" min="0" max="360">
+                      </label>
+                      <label>
+                        Saturate: <span>100</span>%
+                        <input name="saturate" data-sizing="%" type="range" min="0" max="200" value="100" />
+                        <input name="saturate" type="number" class="output" value="100" min="0" max="200">
+                      </label>
+                      <label> 
+                        Brightness: <span>100</span>%
+                        <input name="brightness" data-sizing="%" type="range" min="0" max="200" value="100" />
+                        <input name="brightness" type="number" class="output" value="100" min="0" max="200">
+                      </label>
+                      <label>
+                        Opacity: <span>100</span>%
+                        <input name="opacity" data-sizing="%" type="range" min="0" max="100" value="100" />
+                        <input name="opacity" type="number" class="output" value="100" min="0" max="100">
+                      </label>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
